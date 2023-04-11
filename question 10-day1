@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+   int decimal, binary = 0, base = 1, rem;
+
+   printf("Enter a decimal number: ");
+   scanf("%d", &decimal);
+
+   // loop to convert decimal to binary
+   while (decimal > 0) {
+      rem = decimal % 2;
+      binary = binary + rem * base;
+      decimal = decimal / 2;
+      base = base * 10;
+   }
+
+   printf("The binary equivalent of the decimal number is: %d\n", binary);
+
+   return 0;
+}
