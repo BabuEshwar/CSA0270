@@ -1,0 +1,14 @@
+#include <stdio.h>
+int findcube (int num){
+    return  num * num * num;
+}
+int main()
+{
+    int num, cube;
+    printf("enter any number:");
+    scanf("%d", &num);
+    
+    cube = findcube(num);
+    printf("the cube of a given number is %d", cube);
+    return 0;
+}
