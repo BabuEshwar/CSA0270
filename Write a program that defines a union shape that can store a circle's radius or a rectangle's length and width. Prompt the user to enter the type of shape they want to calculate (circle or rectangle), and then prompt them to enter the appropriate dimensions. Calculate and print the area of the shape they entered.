@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+union Shape {
+    float radius;
+    struct {
+        float length;
+        float width;
+    } rectangle;
+};
+
+int main() {
+    union Shape shape;
+    char choice;
+
+    printf("Enter shape (c for circle, r for rectangle): ");
+    scanf("%c", &choice);
+
+    switch (choice) {
+        case 'c':
+            printf("Enter circle radius: ");
+            scanf("%f", &shape.radius);
+            printf("Circle area: %.2f\n", 3.14 * shape.radius * shape.radius);
+            break;
+        case 'r':
+            printf("Enter rectangle length: ");
+            scanf("%f", &shape.rectangle.length);
+            printf("Enter rectangle width: ");
+            scanf("%f", &shape.rectangle.width);
+            printf("Rectangle area: %.2f\n", shape.rectangle.length * shape.rectangle.width);
+            break;
+        default:
+            printf("Invalid choice.\n");
+            break;
+    }
+
+    return 0;
+}
