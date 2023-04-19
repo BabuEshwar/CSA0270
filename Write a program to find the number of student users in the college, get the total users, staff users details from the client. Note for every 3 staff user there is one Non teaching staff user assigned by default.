@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int total_users, numstudents, numstaff;
+    
+    printf("Enter the total number of users in the college: ");
+    scanf("%d", &total_users);
+    
+    numstaff = total_users / 4;
+    numstudents = total_users - numstaff;
+    
+    printf("Number of student users are : %d\n", numstudents);
+    
+    return 0;
+}
